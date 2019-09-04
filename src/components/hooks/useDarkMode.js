@@ -15,8 +15,4 @@ const useDarkMode = initialValue => {
   return [someValue, setSomeValue];
 };
 
-//useDarkMode(false) // [value, setValue]
-
-// useState(initialValue) // [value, setValue]
-
 export default useDarkMode;
