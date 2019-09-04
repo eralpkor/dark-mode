@@ -5,10 +5,14 @@ import axios from "axios";
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
+import useLocalStorage from "./components/hooks/useLocalStorage";
+
 import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+
+  // const [local, setLocal] = useLocalStorage("testkey", [1, 2, 3]);
 
   useEffect(() => {
     axios
@@ -18,6 +22,7 @@ const App = () => {
       .then(res => setCoinData(res.data))
       .catch(err => console.log(err));
   }, []);
+
   return (
     <div className="App">
       <Navbar />
